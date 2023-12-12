@@ -1,0 +1,43 @@
+{
+  "name": "vitepress-plugin-changelog",
+  "version": "0.1.0",
+  "description": "add changelog and contributors for doc",
+  "main": "index.ts",
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c rollup.config.js"
+  },
+  "files": [
+    "dist",
+    "src",
+    "types",
+    "index.ts"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/changelog.js"
+    },
+    "./changelog.css": "./src/style/changelog.css",
+    "./Changelog.vue": "./src/component/Changelog.vue"
+  },
+  "keywords": [
+    "vitepress-plugin",
+    "changelog",
+    "commit",
+    "contributors"
+  ],
+  "dependencies": {
+    "md5": "^2.3.0",
+    "simple-git": "^3.21.0"
+  },
+  "devDependencies": {
+    "@types/md5": "^2.3.5",
+    "rollup": "^2.66.1",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "tslib": "^2.6.2",
+    "typescript": "^5.3.3",
+    "vitepress": "^1.0.0-rc.31"
+  },
+  "author": "zhangyuhan2016",
+  "license": "MIT"
+}
