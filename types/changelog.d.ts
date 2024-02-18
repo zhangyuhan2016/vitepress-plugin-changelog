@@ -16,6 +16,7 @@ export interface ContributorInfo {
   name: string;
   count: number;
   hash: string;
+  avatar: string;
 }
 
 export function getChangeLog(path: string, count?: number): Promise<CommitInfo[]>;

@@ -26,6 +26,7 @@ export interface ContributorInfo {
   name: string
   count: number
   hash: string
+  avatar: string
 }
 
 let cache: CommitInfo[] | undefined
@@ -59,10 +60,12 @@ export async function getContributorsAt(path: string) {
       .filter((i) => i[1])
       .forEach((i) => {
         if (!map[i[1]]) {
+          const hash = md5(i[1])
           map[i[1]] = {
             name: i[0],
             count: 0,
-            hash: md5(i[1])
+            hash,
+            avatar: `https://gravatar.com/avatar/${hash}?d=retro`
           }
         }
         map[i[1]].count++

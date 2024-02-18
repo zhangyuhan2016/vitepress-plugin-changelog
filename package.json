@@ -1,6 +1,6 @@
 {
   "name": "vitepress-plugin-changelog",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "add changelog and contributors for doc",
   "main": "index.ts",
   "type": "module",

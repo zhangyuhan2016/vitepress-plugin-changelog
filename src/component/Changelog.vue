@@ -36,7 +36,7 @@ const commits = computed(() => {
     </ul>
     <div class="contributors flex-warp">
       <div v-for="c of contributors" :key="c.hash" class="contributor-item">
-        <img :src="`https://gravatar.com/avatar/${c.hash}?d=retro`" class="contributor-avatar" :alt="c.name" :title='c.name'>
+        <img v-if="c.avatar" :src="c.avatar" class="contributor-avatar" :alt="c.name" :title='c.name'>
       </div>
     </div>
   </div>

@@ -97,6 +97,42 @@ export default defineConfig({
 
 ```
 
+### Support
+
+####  Custom Avatar
+
+Default acquisition of gravatar avatar `https://gravatar.com/avatar/${hash}?d=retro`
+
+> Taking gogs as an example, adapting different contributor avatars.
+
+`.vitepress/config.js`
+```js
+// # .vitepress/config.js
+
+async transformPageData ({ relativePath }) {
+    const { contributors, changelog } = await getChangelogAndContributors(relativePath)
+    const CustomAvatars = {
+        'aaa': '26',
+        'bbb': '36'
+    }
+    const CustomContributors = contributors.map(contributor => {
+        contributor.avatar = `https://xxx.gogs.xxx/avatars/${CustomAvatars[contributor.name]}`
+        return contributor
+    })
+    return {
+        CommitData: {
+            contributors: CustomContributors,
+            changelog,
+            commitURL: 'https://xxx.gogs.xxx/organization/repo/commit/',
+            title: 'Changelog'
+        }
+    }
+}
+
+```
+
+#### Custom more
+> You can completely customize your Changelog.vue components.
 
 ## Thanks
 
