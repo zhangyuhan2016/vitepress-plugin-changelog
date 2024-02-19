@@ -28,15 +28,15 @@
   ],
   "dependencies": {
     "md5": "^2.3.0",
-    "simple-git": "^3.21.0"
+    "simple-git": "^3.22.0"
   },
   "devDependencies": {
     "@types/md5": "^2.3.5",
-    "rollup": "^2.66.1",
+    "rollup": "^2.79.1",
     "rollup-plugin-typescript2": "^0.36.0",
     "tslib": "^2.6.2",
     "typescript": "^5.3.3",
-    "vitepress": "^1.0.0-rc.31"
+    "vitepress": "1.0.0-rc.43"
   },
   "author": "zhangyuhan2016",
   "license": "MIT"
